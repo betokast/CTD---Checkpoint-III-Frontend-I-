@@ -6,6 +6,8 @@
   --primary-color-minus-1: #cadf76;
   --black: #000;
   --white: #fff;
+  --secondary-plus-1: #56594a;
+  --secondary-minus-1: #d1d8b4;
 }
 
 body {
@@ -101,7 +103,7 @@ header {
 }
 
 .btn-outline-primary:hover{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background-color: var(--primary-color-zero);
   border: none;
   color: var(--primary-color-plus-1);
@@ -114,7 +116,11 @@ header {
 
 .btn-primary {
   width: 40%;
-  align-self: center;  
+  align-self: center;
+}
+.btn-primary:hover {
+  background-color: var(--secondary-minus-1);
+  color: var(--primary-color-plus-1);
 }
 
 .second-row {
