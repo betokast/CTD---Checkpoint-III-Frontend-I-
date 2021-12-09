@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap");
 
+:root {
+  --primary-color-plus-1: #51592f;
+  --primary-color-zero: #faebd7;
+  --primary-color-minus-1: #cadf76;
+  --black: #000;
+  --white: #fff;
+}
+
 body {
-  background-color: #faebd7;
+  background-color: var(--primary-color-zero);
   font-family: "Readex Pro", sans-serif;
 }
 
@@ -9,7 +17,7 @@ header {
   z-index: 999;
   height: 20vh;
   width: 100vw;
-  background-color: #000;
+  background-color: var(--black);
 
   display: flex;
   align-items: center;
@@ -24,24 +32,22 @@ header {
 
 .logo img {
   width: 120px;
-  /* margin-left: 30%; */
 }
 
 .nav li a {
-  color: #faebd7;
+  color: var(--primary-color-zero);
   font-size: 1.2rem;
 }
 
 #parallaxBar {
   height: 100vh;
   width: 100vw;
-  background-color: #004c82;
   background: url("../img/cake_banner.jpg") 50% -150px fixed;
   position: relative;
 }
 
 .cta-area {
-  color: #fff;
+  color: var(--white);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -57,15 +63,30 @@ header {
   font-weight: 600;
 }
 
-.cta-itens-area button{
+.cta-itens-area button {
+  margin-top: 40px;
+  font-size: 1.5rem;
   width: 30%;
   height: 60px;
   color: #faebd7;
-  border: 2px solid #faebd7;
-  margin: 20px auto;
+  border: 3px solid var(--primary-color-zero);  
   border-radius: 10px;
 }
 
+.cta-itens-area a{
+  text-decoration: none;  
+}
+
+.btn-cta{
+  margin: 0 auto;
+  width: 60%;  
+  display: flex;  
+}
+
+.btn-cta .btn-outline-primary {
+  margin: 60px auto 0;
+  cursor: pointer;  
+}
 
 .titulo {
   font-size: 3rem;
@@ -79,9 +100,21 @@ header {
   flex-direction: column;
 }
 
+.btn-outline-primary:hover{
+  font-size: 1.8rem;
+  background-color: var(--primary-color-zero);
+  border: none;
+  color: var(--primary-color-plus-1);
+}
+
+.btn{
+  background-color: var(--primary-color-plus-1);
+  border: none;
+}
+
 .btn-primary {
   width: 40%;
-  align-self: center;
+  align-self: center;  
 }
 
 .second-row {
