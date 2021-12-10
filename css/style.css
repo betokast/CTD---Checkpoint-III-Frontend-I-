@@ -8,6 +8,11 @@
   --white: #fff;
   --secondary-plus-1: #56594a;
   --secondary-minus-1: #d1d8b4;
+  --grey: #6b7580;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -71,23 +76,23 @@ header {
   width: 30%;
   height: 60px;
   color: #faebd7;
-  border: 3px solid var(--primary-color-zero);  
+  border: 3px solid var(--primary-color-zero);
   border-radius: 10px;
 }
 
-.cta-itens-area a{
-  text-decoration: none;  
+.cta-itens-area a {
+  text-decoration: none;
 }
 
-.btn-cta{
+.btn-cta {
   margin: 0 auto;
-  width: 60%;  
-  display: flex;  
+  width: 60%;
+  display: flex;
 }
 
 .btn-cta .btn-outline-primary {
   margin: 60px auto 0;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .titulo {
@@ -97,19 +102,37 @@ header {
   margin: 5rem 0;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
   font-size: 1.6rem;
   background-color: var(--primary-color-zero);
   border: none;
   color: var(--primary-color-plus-1);
 }
 
-.btn{
+/* ========= CARDS ========= */
+
+.card-body {
+  top: -20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;  
+}
+
+.card{
+  background-color: var(--primary-color-zero);
+  border: none;
+}
+
+.card-body{
+  background-color: var(--white);
+}
+
+.card img{
+  border-radius: 20px 20px 0 0;    
+}
+
+.btn {
   background-color: var(--primary-color-plus-1);
   border: none;
 }
@@ -124,8 +147,11 @@ header {
 }
 
 .second-row {
-  margin-top: 30px;
+  margin-top: 10px;
 }
+
+
+/* ========= FOOTER ========= */
 
 .footer {
   margin-top: 40px;
@@ -142,6 +168,11 @@ header {
   margin-top: 80px;
 }
 
+.footer-item > p{
+  color: var(--white);
+  margin: 10px 0 20px;
+}
+
 .footer-item-left {
   text-align: left;
 }
@@ -149,9 +180,56 @@ header {
   text-align: right;
 }
 
+.footer-item-last {
+  margin-top: 60px;
+  color: var(--grey);
+}
+
 .social-medias a img {
   width: 30px;
 }
 .social-medias a:nth-child(2) {
   margin-left: 5px;
+}
+
+/* ======== MODAL ======== */
+.modal-dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  align-items: center;
+  width: 380px;
+  height: 480px;
+  border-radius: 15px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-title img {
+  margin-top: 30px;
+  width: 60%;
+}
+
+.modal-form,
+.modal-itens {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.modal-itens input {
+  border-radius: 5px;
+  border-style: none;
+  border: 2px solid var(--primary-color-plus-1);
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }

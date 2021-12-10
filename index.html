@@ -34,13 +34,14 @@
                 <a class="nav-link" href="#">Sobre nós</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">Login</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#ModalLongoExemplo">Login</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </header>
+
     <section
       id="parallaxBar"
       class="cta-area"
@@ -52,9 +53,7 @@
           <h1>Abdu's Fix</h1>
           <h2>Confira a melhor seleção de bolos, tortas e outras delícias</h2>
           <a href="#titulo-pagina" class="btn-cta">
-            <button type="button" class="btn-outline-primary">
-              Explorar
-            </button>
+            <button type="button" class="btn-outline-primary">Explorar</button>
           </a>
         </div>
       </div>
@@ -156,7 +155,8 @@
             <div class="card-body">
               <h5 class="card-title">Bolo de Chocolate Branco</h5>
               <p class="card-text">
-                O bolo é macio e um sabor amanteigado de chocolate branco e vai se tornar seu novo favorito!
+                O bolo é macio e um sabor amanteigado de chocolate branco e vai
+                se tornar seu novo favorito!
               </p>
               <button type="button" class="btn btn-primary">Abrir</button>
             </div>
@@ -164,14 +164,14 @@
         </div>
       </div>
     </div>
-
+    <!-- ========= FOOTER ========= --> 
     <footer class="row footer">
       <div class="container">
         <div class="col-12">
           <div class="row footer-area">
-            <div class="col-4 footer-item-left">
+            <div class="col-4 footer-item-left footer-item">
               <h4>Abdallah Yaziji</h4>
-              <p>Responsável pelo desenvolvimento de</p>
+              <p>Responsável pelo desenvolvimento da página dos itens, e estilização da mesma</p>
               <div class="social-medias">
                 <a
                   href="https://www.linkedin.com/in/abdallah-yaziji-7487b1214/"
@@ -184,9 +184,9 @@
                 </a>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 footer-item">
               <h4>Leandro Vieira</h4>
-              <p>Responsável pelo desenvolvimento de</p>
+              <p>Responsável pelo desenvolvimento da página dos itens, e estilização da mesma</p>
               <div class="social-medias">
                 <a
                   href="https://www.linkedin.com/in/leandro-coelho-vieira-5ba806123/"
@@ -199,9 +199,9 @@
                 </a>
               </div>
             </div>
-            <div class="col-4 footer-item-right">
+            <div class="col-4 footer-item-right footer-item">
               <h4>Roberto Castro</h4>
-              <p>Responsável pelo desenvolvimento de</p>
+              <p>Responsável pelo desenvolvimento da estrutura da home, e estilização da mesma</p>
               <div class="social-medias">
                 <a
                   href="https://www.linkedin.com/in/robertocastro76/"
@@ -214,10 +214,62 @@
                 </a>
               </div>
             </div>
+            <h6 class="footer-item-last">Checkpoint 3 desenvolvido em 2021</h6>
           </div>
         </div>
       </div>
     </footer>
+    <!-- ========= MODAL ========= -->  
+    <div
+      class="modal fade"
+      id="ModalLongoExemplo"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="TituloModalLongoExemplo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title" id="TituloModalLongoExemplo">
+              <img src="./img/Logo_AbdusBK.png" alt="Logomarca" />
+            </div>
+            <button 
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Fechar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="#" class="modal-form">
+              <div class="modal-itens">
+                <label for="email">Email:</label>
+                <input type="email" name="email">
+              </div>
+              <div class="modal-itens">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha">
+              </div>
+              <div class="modal-btn">
+                <button class="btn btn-primary" type="submit">Entrar</button>
+                <button class="btn btn-primary"  type="reset">Limpar</button>
+              </div>
+            </form>
+          </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $("#meuModal").on("shown.bs.modal", function () {
+        $("#meuInput").trigger("focus");
+      });
+    </script>
+    <!-- ========= MODAL ========= -->
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
