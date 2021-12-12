@@ -46,6 +46,12 @@ header {
   font-size: 1.2rem;
 }
 
+.nav li a:hover{
+  color: var(--black);
+  background-color: var(--primary-color-minus-1);
+  border-radius: 5px;
+}
+
 #parallaxBar {
   height: 100vh;
   width: 100vw;
@@ -86,7 +92,7 @@ header {
 
 .btn-cta {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   display: flex;
 }
 
@@ -102,12 +108,13 @@ header {
   margin: 5rem 0;
 }
 
-.btn-outline-primary:hover {
-  font-size: 1.6rem;
+.btn-outline-primary:hover {  
   background-color: var(--primary-color-zero);
   border: none;
   color: var(--primary-color-plus-1);
 }
+
+
 
 /* ========= CARDS ========= */
 
@@ -121,11 +128,16 @@ header {
 
 .card{
   background-color: var(--primary-color-zero);
-  border: none;
+  border: none; 
 }
 
 .card-body{
   background-color: var(--white);
+  display: flex;
+}
+
+.card-body a{
+  text-align: center;  
 }
 
 .card img{
@@ -232,4 +244,38 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+}
+
+
+/* =============== MEDIA QUERY =============== */
+
+#menu-inferior{
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  #menu-inferior {
+    width: 100vw;
+      max-height: 2000px;
+      opacity: 1;
+      transition: all 0.5s ease-in-out 0s;
+  }
+  .bg-dark{
+    background-color: #000 !important;  
+  }
+
+  #menu-inferior{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #menu-superior{
+    opacity: 0;
+  }
+
+  .cta-itens-area button {
+    font-size: 1.4rem;
+    width: 60%;  
+  }
+
 }
